@@ -156,7 +156,6 @@ For example:
 @theme {
   --color-primary: #ee0181;
   --font-poppins: "Poppins", sans-serif;
-  --font-inter: "Inter", sans-serif;
 }
 ```
 
@@ -288,26 +287,3 @@ Use:
 
 Tailwind v4 uses a CSS-first configuration approach, so a `tailwind.config.js` file is not required for this setup.
 
-When following Tailwind v3 tutorials, remember that some configuration syntax is different in v4. For example:
-
-**Tailwind v3:**
-
-```js
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        primary: "#ee0181"
-      }
-    }
-  }
-}
-```
-
-**Tailwind v4:**
-
-```css
-@theme {
-  --color-primary: #ee0181;
-}
-```
