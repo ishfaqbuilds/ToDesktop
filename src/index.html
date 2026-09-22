@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <title>ToDesktop</title>
+  </head>
+
+  <body>
+    <!-- ###################### NAVBAR ###################### -->
+
+    <nav class="p-3 flex bg-white justify-between items-center">
+
+      <a href="#" id="brand" class="flex gap-2 items-center">
+        <img src="../assets/asset 0.png" alt="Logo" class="object-cover max-w-12 max-h-12" />
+        <span class="text-lg font-medium font-display">ToDesktop</span>
+      </a>
+
+      <div id="nav-menu" class="hidden lg:flex gap-12">
+        <a href="#" class="font-medium hover:text-primary">Pricing</a>
+        <a href="#" class="font-medium hover:text-primary">Docs</a>
+        <a href="#" class="font-medium hover:text-primary">Changelog</a>
+        <a href="#" class="font-medium hover:text-primary">Blogs</a>
+        <a href="#" class="font-medium hover:text-primary">Login</a>
+      </div>
+
+      <button class="hidden lg:flex items-center gap-2 border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
+        <img src="../assets/asset 1.svg" alt="Electron Developers" />
+        <span>Electron Developers</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+      <button class="p-2 lg:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-gray-600"></i>
+      </button>
+
+      <!-- ###################### NAV DIALOG MOBILE ###################### -->
+
+      <div id="nav-dialog" class="hidden fixed bg-white inset-0 p-3 z-10 md:hidden">
+
+        <div id="nav-bar" class="flex justify-between">
+          <a href="#" id="brand" class="flex gap-2 items-center">
+            <img src="../assets/asset 0.png" alt="Logo" class="object-cover max-w-12 max-h-12" />
+            <span class="text-lg font-medium font-display">ToDesktop</span>
+          </a>
+
+          <button class="p-2 md:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-gray-600"></i>
+          </button>
+        </div>
+
+        <div class="mt-6">
+          <a href="#" class="font-medium m-3 p-3 hover:bg-blue-50 block rounded-lg">Pricing</a>
+          <a href="#" class="font-medium m-3 p-3 hover:bg-blue-50 block rounded-lg">Docs</a>
+          <a href="#" class="font-medium m-3 p-3 hover:bg-blue-50 block rounded-lg">Changelog</a>
+          <a href="#" class="font-medium m-3 p-3 hover:bg-blue-50 block rounded-lg">Blogs</a>
+          <a href="#" class="font-medium m-3 p-3 hover:bg-blue-50 block rounded-lg">Login</a>
+        </div>
+
+        <div class="h-px bg-gray-300"></div>
+
+        <button class="flex mt-6 w-full items-center gap-2 px-6 py-4 rounded-lg hover:bg-blue-50">
+        <img src="../assets/asset 1.svg" alt="Electron Developers" />
+        <span>Electron Developers</span>
+      </button>
+
+      </div>
+
+      <!-- ############################################################### -->
+
+    </nav>
+  </body>
+  <script src="script.js"></script>
+</html>
