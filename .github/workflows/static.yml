@@ -38,9 +38,10 @@ jobs:
       - name: Prepare website
         run: |
           cp src/index.html dist/index.html
+          cp src/script.js dist/script.js
           cp -R assets dist/assets
-          sed -i 's#../dist/output.css#./output.css#g; s#../assets/#./assets/#g' dist/index.html
-
+          sed -i 's#../dist/output.css#./output.css#g; s#../assets/#./assets/#g; s#../src/script.js#./script.js#g' dist/index.html
+          
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
