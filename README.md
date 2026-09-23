@@ -2,10 +2,6 @@
 
 A fully responsive recreation of the [ToDesktop](https://www.todesktop.com/) landing page, built as a practice project to learn and apply Tailwind CSS. This is **not an original design** — it's a pixel-focused clone of an existing real-world product site, built to practice responsive layouts, utility classes, custom styling, typography, spacing, and modern UI patterns using HTML, Tailwind CSS, and JavaScript.
 
-## Live Preview
-
-[Preview 📌](https://ishfaqbuilds.github.io/ToDesktop/)
-
 ## Built With
 
 - HTML
