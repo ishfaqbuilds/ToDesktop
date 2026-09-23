@@ -41,4 +41,4 @@ ToDesktop/
 
 ## Tailwind Config
 
-Tailwind setup/config used for this project: [View](https://tailwind.ishfaqbuilds.dev/)
+Tailwind setup/config used for this project: [Tailwind.Setup](https://tailwind.ishfaqbuilds.dev/)
