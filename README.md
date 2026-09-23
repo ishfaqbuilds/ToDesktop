@@ -4,7 +4,7 @@ A fully responsive recreation of the [ToDesktop](https://www.todesktop.com/) lan
 
 ## Live Preview
 
-[Live Demo](https://ishfaqbuilds.github.io/ToDesktop/)
+[Click Here To Preview](https://ishfaqbuilds.github.io/ToDesktop/)
 
 ## Built With
 
