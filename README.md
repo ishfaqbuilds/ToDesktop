@@ -4,13 +4,13 @@ A fully responsive recreation of the [ToDesktop](https://www.todesktop.com/) lan
 
 ## Live Preview
 
-https://ishfaqbuilds.github.io/ToDesktop/
+[Live Demo](https://ishfaqbuilds.github.io/ToDesktop/)
 
 ## Built With
 
 - HTML
 - Tailwind CSS
-- JavaScript
+- JavaScript`
 
 ## Features
 
