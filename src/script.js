@@ -1,3 +1,11 @@
+const navDialog = document.getElementById("nav-dialog");
+function handleMenu() {
+  navDialog.classList.toggle("hidden");
+}
+
+const initialTranslateLTR = -48 * 4;
+const initialTranslateLTRLine3 = -20 * 4;
+
 function setupIntersectionObserver(element, isLTR, speed, initialTranslate = 0) {
   const initialTop = element.getBoundingClientRect().top + window.scrollY;
 
@@ -16,19 +24,13 @@ function setupIntersectionObserver(element, isLTR, speed, initialTranslate = 0) 
   intersectionObserver.observe(element);
 
   function scrollHandler() {
-    const translateX =
-      (window.innerHeight + window.scrollY - initialTop) * speed;
+    const translateX = (window.innerHeight + window.scrollY - initialTop) * speed;
 
-    const totalTranslate = isLTR
-      ? translateX + initialTranslate
-      : -(translateX + initialTranslate);
+    const totalTranslate = isLTR ? translateX + initialTranslate : -(translateX + initialTranslate);
 
     element.style.transform = `translateX(${totalTranslate}px)`;
   }
 }
-
-const initialTranslateLTR = -48 * 4;
-const initialTranslateLTRLine3 = -20 * 4;
 
 const line1 = document.getElementById("line-1");
 const line2 = document.getElementById("line-2");
