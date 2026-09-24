@@ -1,4 +1,4 @@
-function setupIntersectionObserver(element, isLTR, speed) {
+function setupIntersectionObserver(element, isLTR, speed, initialTranslate = 0) {
   const initialTop = element.getBoundingClientRect().top + window.scrollY;
 
   const intersectionCallback = (entries) => {
@@ -16,33 +16,24 @@ function setupIntersectionObserver(element, isLTR, speed) {
   intersectionObserver.observe(element);
 
   function scrollHandler() {
-    const translateX = (window.innerHeight + window.scrollY - initialTop) * speed;
+    const translateX =
+      (window.innerHeight + window.scrollY - initialTop) * speed;
 
-    const totalTranslate = isLTR ? translateX : -translateX;
+    const totalTranslate = isLTR
+      ? translateX + initialTranslate
+      : -(translateX + initialTranslate);
 
     element.style.transform = `translateX(${totalTranslate}px)`;
   }
 }
 
+const initialTranslateLTR = -48 * 4;
+const initialTranslateLTRLine3 = -20 * 4;
+
 const line1 = document.getElementById("line-1");
 const line2 = document.getElementById("line-2");
 const line3 = document.getElementById("line-3");
 
-setupIntersectionObserver(line1, true, 0.15);
+setupIntersectionObserver(line1, true, 0.15, initialTranslateLTR);
 setupIntersectionObserver(line2, false, 0.15);
-
-if (window.innerWidth < 1024) {
-  setupIntersectionObserver(line3, true, 0.15);
-}
-
-const dtElements = document.querySelectorAll("dt");
-dtElements.forEach((element) => {
-  element.addEventListener("click", () => {
-    const ddId = element.getAttribute("aria-controls");
-    const ddElement = document.getElementById(ddId);
-    const ddArrowIcon = element.querySelectorAll("i")[0];
-
-    ddElement.classList.toggle("hidden");
-    ddArrowIcon.classList.toggle("-rotate-180");
-  });
-});
+setupIntersectionObserver(line3, true, 0.15, initialTranslateLTRLine3);

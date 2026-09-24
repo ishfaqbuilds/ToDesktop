@@ -6,7 +6,7 @@ A fully responsive recreation of the [ToDesktop](https://www.todesktop.com/) lan
 
 - HTML
 - Tailwind CSS
-- JavaScript`
+- JavaScript
 
 ## Features
 
