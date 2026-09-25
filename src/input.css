@@ -9,11 +9,17 @@
 }
 
 @layer base {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   body {
     @apply font-body;
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     @apply font-display text-gray-800 font-medium;
   }
 }
