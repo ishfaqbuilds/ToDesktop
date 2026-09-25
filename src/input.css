@@ -9,17 +9,20 @@
 }
 
 @layer base {
-  html,
-  body {
+  html, body {
     overflow-x: hidden;
   }
   body {
     @apply font-body;
   }
 
-  h1,
-  h2,
-  h3 {
+  h1, h2, h3 {
     @apply font-display text-gray-800 font-medium;
   }
+
+  .container {
+    @apply px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-32 2xl:max-w-370;
+  }
+
+
 }
